@@ -1,0 +1,67 @@
+.text-bg-liner {
+    background             : linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+* {
+    box-sizing: border-box;
+    padding   : 0;
+    margin    : 0;
+}
+
+
+a {
+    text-decoration: none;
+    color          : currentColor;
+}
+
+ul {
+    list-style: none;
+}
+
+.customize-menu-antd {
+    height: calc(100vh - 56px);
+}
+
+.customize-menu-antd *:not(li, .ant-menu-title-content) {
+    background-color: transparent !important;
+}
+
+.ant-btn-primary {
+    background-color: #1677ff !important;
+}
+
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+.new-books-slider {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(140.88deg, #EB5231 -29.15%, #571FCF 151.64%);
+}
+
+.new-books-slider .slick-dots {
+    bottom: 6px;
+}
+
+.new-books-slider .slick-dots li button {
+    background: #ccc !important;
+}
+
+.item-preview-image img {
+    width        : 210px !important;
+    height       : 230px !important;
+    border-radius: 10px;
+}
+
+.slick-custom-paging-preview-image li {
+    width     : auto;
+    height    : auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slick-custom-paging-preview-image {
+    bottom: -12px;
+}

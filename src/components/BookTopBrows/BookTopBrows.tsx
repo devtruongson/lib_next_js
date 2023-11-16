@@ -1,0 +1,102 @@
+"use client";
+import usePagination from "@/hooks/usePagination";
+import { getBookTopBrowsService } from "@/services/bookService";
+import { IBookShow } from "@/utils/interface";
+import { Badge, Button, Col, Row, Spin } from "antd";
+import Image from "next/image";
+import React from "react";
+import { v4 as uuid4 } from "uuid";
+
+const BookTopBrows: React.FC = () => {
+    const { data, handleChangePage, isLoading, meta } =
+        usePagination<IBookShow>({
+            api: getBookTopBrowsService,
+            isToken: false,
+            page: 1,
+            pageSize: 10,
+            is_load_more: true,
+        });
+
+    return (
+        <>
+            <Spin spinning={isLoading} fullscreen />
+            <div className="mt-5">
+                <h2 className="mt-8 mb-2 text-2xl font-[600] text-[#4d4d4d]">
+                    Top Sách Mượn Nhiều
+                </h2>
+                <div>
+                    <Row>
+                        {data &&
+                            data.length > 0 &&
+                            data.map((item) => {
+                                return (
+                                    <Col
+                                        sm={4}
+                                        key={uuid4()}
+                                        className="h-[260px] px-[10px] py-[10px] w-[100%] hover:translate-y-[-10px] hover:transition-all cursor-pointer"
+                                    >
+                                        <Badge
+                                            count={item.count_borrow_books}
+                                            overflowCount={99}
+                                            className="w-full"
+                                        >
+                                            <Badge.Ribbon
+                                                text="Top Mượn Nhiều"
+                                                placement="start"
+                                                className={`text-[11px] ${
+                                                    item.count_borrow_books >
+                                                    100
+                                                        ? ""
+                                                        : "hidden"
+                                                }`}
+                                            >
+                                                <div className="bg-[#fff] shadow-md h-full px-[20px] py-[10px] mx-auto rounded-[7px]">
+                                                    <Image
+                                                        width={130}
+                                                        height={170}
+                                                        src={
+                                                            process.env
+                                                                .NEXT_PUBLIC_BASE_URL_PRODUCTION +
+                                                            `/upload/folder/app/${item.thumbnail_url}/book`
+                                                        }
+                                                        alt="Hình Ảnh Sách Top Mượn"
+                                                        className="h-[170px] w-[100%] block object-cover mx-auto rounded-[6px]"
+                                                    />
+                                                    <div>
+                                                        <h2 className="line-clamp-1 font-[600] my-[4px] ">
+                                                            {item.title}
+                                                        </h2>
+                                                        <div
+                                                            className="line-clamp-1 text-[12px] pt-[4px]"
+                                                            dangerouslySetInnerHTML={{
+                                                                __html: item.description,
+                                                            }}
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </Badge.Ribbon>
+                                        </Badge>
+                                    </Col>
+                                );
+                            })}
+                        {meta && meta.currentPage < meta.totalPages && (
+                            <Col sm={24}>
+                                <Button
+                                    type="dashed"
+                                    className="w-[30%] mx-auto block mt-5"
+                                    onClick={() =>
+                                        handleChangePage(meta.currentPage + 1)
+                                    }
+                                >
+                                    Xem Thêm
+                                </Button>
+                            </Col>
+                        )}
+                    </Row>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default BookTopBrows;
