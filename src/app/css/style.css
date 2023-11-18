@@ -65,3 +65,7 @@ ul {
 .slick-custom-paging-preview-image {
     bottom: -12px;
 }
+
+.slick-dots li button:before {
+    display: none;
+}

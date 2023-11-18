@@ -21,6 +21,7 @@ import Image from "next/image";
 import Link from "next/link";
 import useAuthStore from "@/stores/authStore";
 import { Button, Input } from "antd";
+import SearchInput from "../SearchInput/SearchInput";
 
 function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
@@ -118,7 +119,7 @@ const Header: React.FC = () => {
                 aria-label="Global"
             >
                 <div className="flex lg:flex-0.5">
-                    <a href="#" className="-m-1.5 p-1.5">
+                    <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
                         <Image
                             width={200}
@@ -131,7 +132,7 @@ const Header: React.FC = () => {
                             }
                             alt="Logo Website"
                         />
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -145,13 +146,7 @@ const Header: React.FC = () => {
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-3 items-center">
                     <div className="w-[400px] relative flex justify-between items-center border-[1px] overflow-hidden border-solid border-[#ccc] rounded-[6px]">
-                        <Input
-                            placeholder="Nhập Sách Tìm Kiếm...."
-                            className="w-[390px] border-none outline-none hover:border-none focus:border-none focus-within:border-none"
-                        />
-                        <Button type="primary" className="flex-1">
-                            <i className="bi bi-search"></i>
-                        </Button>
+                        <SearchInput />
                     </div>
                     <Popover.Group className="hidden lg:flex lg:gap-x-12">
                         <Popover className="relative">

@@ -1,29 +1,39 @@
 "use client";
 import usePagination from "@/hooks/usePagination";
-import { getBookTopBrowsService } from "@/services/bookService";
+import { relationBookService } from "@/services/bookService";
 import { IBookShow } from "@/utils/interface";
 import { Badge, Button, Col, Row, Spin } from "antd";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import React from "react";
 import { v4 as uuid4 } from "uuid";
 
-const BookTopBrows: React.FC = () => {
+const RelationBook: React.FC<{
+    is_random: boolean;
+}> = ({ is_random = false }) => {
+    const params: {
+        slug: string;
+    } = useParams();
+
     const { data, handleChangePage, isLoading, meta } =
         usePagination<IBookShow>({
-            api: getBookTopBrowsService,
+            api: is_random ? () => {} : relationBookService,
             isToken: false,
             page: 1,
             pageSize: 10,
             is_load_more: true,
+            conditions: {
+                slug: params.slug,
+            },
         });
 
     return (
-        <>
+        <div className="bg-[#fff] rounded-[6px] py-3 px-3 mt-6 shadow-sm">
             <Spin spinning={isLoading} fullscreen />
             <div className="mt-5">
                 <h2 className="mt-8 mb-2 text-2xl font-[600] text-[#4d4d4d]">
-                    Top Sách Mượn Nhiều
+                    Sách Có Liên Quan
                 </h2>
                 <div>
                     <Row>
@@ -101,8 +111,8 @@ const BookTopBrows: React.FC = () => {
                     </Row>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
-export default BookTopBrows;
+export default RelationBook;

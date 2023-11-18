@@ -1,8 +1,17 @@
+"use client";
 import { Tooltip } from "antd";
 import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-export function CopyClipBoard({ text }: { text: string }) {
+export function CopyClipBoard({
+    text,
+    children,
+    is_render_children = false,
+}: {
+    text: any;
+    children: React.ReactNode;
+    is_render_children: boolean;
+}) {
     const [isCopy, setIsCopy] = useState<boolean>(false);
 
     return (
@@ -12,7 +21,11 @@ export function CopyClipBoard({ text }: { text: string }) {
                     isCopy ? "Đã Copy vào clipboard" : "Nhấn vào đây để copy"
                 }
             >
-                <p className="font-[600] text-[14px] pt-1">{text}</p>
+                {is_render_children ? (
+                    children
+                ) : (
+                    <p className="font-[600] text-[14px] pt-1">{text}</p>
+                )}
             </Tooltip>
         </CopyToClipboard>
     );

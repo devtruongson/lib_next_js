@@ -1,4 +1,6 @@
 // import CheckCurrentUser from "@/components/CheckCurrentUser/CheckCurrentUser";
+import NewFeed from "@/Modal/NewFeed/NewFeed";
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 
 export default function MarketingLayout({
@@ -8,13 +10,17 @@ export default function MarketingLayout({
 }) {
     return (
         <div>
+            <NewFeed />
             <div className="bg-[#fff] fixed top-0 right-0 left-0 z-[990] shadow-sm">
                 <div className="container mx-auto">
                     <Header />
                 </div>
             </div>
-            <div className="bg-[#F3F3F7] mt-[100px] h-[calc(100vh_-_100px)] py-[20px] overflow-auto">
+            <div className="bg-[#F3F3F7] mt-[100px] py-[20px]">
                 <div className="container mx-auto">{children}</div>
+            </div>
+            <div>
+                <Footer />
             </div>
         </div>
     );

@@ -1,14 +1,25 @@
 import { create } from "zustand";
 
-export interface ProState {
-    isOpen: boolean;
-    handleOpenOrCloseProModal: () => void;
-    handleCloseProModal: () => void;
+export interface appState {
+    textSearch: string;
+    is_open_result_search: boolean;
+    updateTextSearch: (text: string) => void;
+    updateOpenResultSearch: (e: boolean) => void;
 }
 
-export const useProStore = create<ProState>()((set) => ({
-    isOpen: false,
-    handleOpenOrCloseProModal: () =>
-        set((state) => ({ ...state, isOpen: !state.isOpen })),
-    handleCloseProModal: () => set((state) => ({ ...state, isOpen: false })),
+export const useAppStore = create<appState>()((set) => ({
+    textSearch: "",
+    is_open_result_search: true,
+    updateTextSearch: (text) => {
+        set((state) => ({
+            ...state,
+            textSearch: text,
+        }));
+    },
+    updateOpenResultSearch: (e) => {
+        set((state) => ({
+            ...state,
+            is_open_result_search: e,
+        }));
+    },
 }));

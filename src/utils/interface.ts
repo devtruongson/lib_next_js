@@ -56,6 +56,11 @@ export interface IBook extends IBookShow {
     is_active: boolean;
     view_book: number;
     images?: IImageBook[];
+    stock_brows: number;
+    categories?: {
+        id: number;
+        cate: ICategorie;
+    }[];
 }
 
 export interface IPagin<T, G, H> {
@@ -89,4 +94,21 @@ export interface IImageBook {
     link_url: string;
     is_active: boolean;
     destination: string;
+}
+
+export interface ICategorie {
+    id: number;
+    title: string;
+    slug: string;
+    description: string;
+    description_markdown: string;
+    is_active: boolean;
+}
+
+export interface ISearch {
+    q: string;
+    cate: "all" | number[];
+    is_stock: "false" | "true";
+    page: number;
+    pageSize: number;
 }
