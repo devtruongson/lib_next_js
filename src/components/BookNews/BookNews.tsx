@@ -58,7 +58,7 @@ const BookNews: React.FC = () => {
                                             className={`text-[11px]`}
                                             color="#ee4d2d"
                                         >
-                                            <div className="h-[200px] overflow-auto no-scrollbar shadow-md px-[6px] py-[5px] pt-[8px] border-[1px] border-solid border-[#eee]">
+                                            <div className="h-[200px] max-w-[140px] overflow-auto no-scrollbar shadow-md px-[6px] py-[5px] pt-[8px] border-[1px] border-solid border-[#eee]">
                                                 <Image
                                                     className="object-cover h-[80%] rounded-[10px]"
                                                     width={200}

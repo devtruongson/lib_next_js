@@ -69,3 +69,8 @@ ul {
 .slick-dots li button:before {
     display: none;
 }
+
+.avatar-profile {
+    width : 100px !important;
+    height: 100px !important;
+}

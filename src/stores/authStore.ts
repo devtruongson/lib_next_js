@@ -109,6 +109,9 @@ const useAuthStore = create<AuthState>()(
                         checkCurrentUserService
                     );
                     if (Res) {
+                        if (Res.is_verify_email) {
+                            window.location.href = "/";
+                        }
                         set((state) => ({
                             ...state,
                             is_verify_email: Res.is_verify_email,
@@ -121,7 +124,7 @@ const useAuthStore = create<AuthState>()(
                         user: null,
                         is_verify_email: false,
                     }));
-                    window.location.href = "/";
+                    window.location.href = "/auth/login";
                 }
             },
             logout: () => {

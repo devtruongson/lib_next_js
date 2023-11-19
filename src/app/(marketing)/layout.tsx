@@ -1,4 +1,3 @@
-// import CheckCurrentUser from "@/components/CheckCurrentUser/CheckCurrentUser";
 import NewFeed from "@/Modal/NewFeed/NewFeed";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";

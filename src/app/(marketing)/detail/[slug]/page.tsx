@@ -123,7 +123,6 @@ export default async function Detail({
                                                                         href={`/cate/${item.cate.slug}`}
                                                                         className="block decoration-current"
                                                                     >
-                                                                        Xin
                                                                         {
                                                                             item
                                                                                 .cate
@@ -230,7 +229,6 @@ export default async function Detail({
                                                                                 href={`/cate/${item.cate.slug}`}
                                                                                 className="block decoration-current"
                                                                             >
-                                                                                Xin
                                                                                 {
                                                                                     item
                                                                                         .cate

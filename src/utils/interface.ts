@@ -24,6 +24,18 @@ export interface IUser {
     role: roleUser;
     slug: string;
     is_login_fire_base: boolean;
+    profile?: IProfile;
+}
+
+export interface IProfile {
+    id: number;
+    avatar_url: string;
+    phoneNumber: string;
+    address: string;
+    school: string;
+    class: string;
+    birthday: string;
+    description: string;
 }
 
 export interface ICurrentUserRole {
@@ -111,4 +123,21 @@ export interface ISearch {
     is_stock: "false" | "true";
     page: number;
     pageSize: number;
+}
+
+export interface IUpdateProfile {
+    user: {
+        email: string;
+        firstName: string;
+        lastName: string;
+    };
+    profile: {
+        avatar_url: string;
+        phoneNumber: string;
+        address: string;
+        school: string;
+        class: string;
+        birthday: string;
+        description: string;
+    };
 }

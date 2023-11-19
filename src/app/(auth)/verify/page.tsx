@@ -14,10 +14,6 @@ const CheckRoleCurrent: React.FC = () => {
     const search = useSearchParams();
 
     useEffect(() => {
-        if (is_verify_email) {
-            window.location.href = "/";
-        }
-
         if (!isLoginIn) {
             window.location.href = "/auth/login";
         }
