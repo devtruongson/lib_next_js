@@ -27,9 +27,7 @@ export async function middleware(request: NextRequest) {
             );
             return NextResponse.redirect(redirectURL);
         }
-
         const responseAPIValid = response as ICurrentUserRole;
-
         if (responseAPIValid.is_verify_email) {
             return NextResponse.next();
         }
@@ -49,5 +47,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/"],
+    matcher: ["/", "/account/order", "/account/profile"],
 };

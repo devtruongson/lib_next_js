@@ -29,6 +29,7 @@ export async function HandleApi(api: Function, data?: any) {
             } catch (error) {
                 localStorage.clear();
                 await logoutService();
+                return Promise.reject(error);
             }
         } else {
             return Promise.reject(error);

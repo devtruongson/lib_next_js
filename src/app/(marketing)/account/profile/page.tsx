@@ -140,11 +140,8 @@ const Profile: NextPage = () => {
         }
 
         const arrValidate = [
-            user.id,
-            user.email,
             user.fistName,
             user.lastName,
-            profile.id,
             profile.address,
             profile.birthday,
             profile.class,
@@ -221,7 +218,7 @@ const Profile: NextPage = () => {
                                             ? profile.avatar_url
                                             : process.env
                                                   .NEXT_PUBLIC_BASE_URL_PRODUCTION +
-                                              "/upload/folder/" +
+                                              "/upload/folder/app/" +
                                               profile?.avatar_url +
                                               "/upload"
                                         : "https://png.pngtree.com/png-vector/20190820/ourmid/pngtree-no-avatar-vector-isolated-on-white-background-png-image_1694546.jpg"

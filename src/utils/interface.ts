@@ -144,3 +144,11 @@ export interface IUpdateProfile {
 export interface IUploadImage {
     image: File;
 }
+
+export interface IOrder {
+    id: number;
+    is_give_book_back: boolean;
+    time_order: string;
+    expire_give_book: string;
+    book: IBook;
+}
