@@ -31,7 +31,7 @@ const BookNews: React.FC = () => {
     return (
         <div className="rounded-[10px] shadow-sm overflow-hidden new-books-slider item-slider flex justify-center py-[1px] px-[1px] w-full max-h-[250px]">
             <div className="w-[6%] flex-shrink-0 flex justify-center items-center">
-                <h5 className="rotate-[-90deg] text-white text-[20px] font-bold whitespace-nowrap italic">
+                <h5 className="rotate-[-90deg] text-white text-[14px] md:text-[20px] font-bold whitespace-nowrap italic">
                     Sách Mới Cập Nhật
                 </h5>
             </div>
@@ -41,6 +41,26 @@ const BookNews: React.FC = () => {
                     speed={1500}
                     className="w-[100%]"
                     slidesToShow={5}
+                    responsive={[
+                        {
+                            breakpoint: 900,
+                            settings: {
+                                slidesToShow: 2,
+                            },
+                        },
+                        {
+                            breakpoint: 1150,
+                            settings: {
+                                slidesToShow: 4,
+                            },
+                        },
+                        {
+                            breakpoint: 1300,
+                            settings: {
+                                slidesToShow: 5,
+                            },
+                        },
+                    ]}
                 >
                     {books &&
                         books.length > 0 &&

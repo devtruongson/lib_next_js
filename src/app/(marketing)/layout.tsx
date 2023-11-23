@@ -15,7 +15,7 @@ export default function MarketingLayout({
                     <Header />
                 </div>
             </div>
-            <div className="bg-[#F3F3F7] mt-[100px] py-[20px]">
+            <div className="bg-[#F3F3F7] mt-[100px] py-[20px] px-[8px] md:px-0">
                 <div className="container mx-auto">{children}</div>
             </div>
             <div>

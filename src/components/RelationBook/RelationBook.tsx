@@ -96,10 +96,13 @@ const RelationBook: React.FC<{
                                 );
                             })}
                         {meta && meta.currentPage < meta.totalPages && (
-                            <Col sm={24}>
+                            <Col
+                                md={24}
+                                className="flex justify-center w-full md:w-auto"
+                            >
                                 <Button
                                     type="dashed"
-                                    className="w-[30%] mx-auto block mt-5"
+                                    className=" w-full md:w-[30%] mx-auto block mt-5"
                                     onClick={() =>
                                         handleChangePage(meta.currentPage + 1)
                                     }

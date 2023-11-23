@@ -117,7 +117,7 @@ const OrderView: React.FC<{ book: IBook }> = ({ book }) => {
     };
 
     return (
-        <div>
+        <div className="flex justify-center items-center md:block">
             <Row gutter={16}>
                 <Col sm={12}>
                     <Button type="dashed" className="w-full h-[36px]">

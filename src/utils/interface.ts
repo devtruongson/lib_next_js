@@ -152,3 +152,9 @@ export interface IOrder {
     expire_give_book: string;
     book: IBook;
 }
+
+export interface IBookCate {
+    id: number;
+    book: IBook;
+    cate: ICategorie;
+}
