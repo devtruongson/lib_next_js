@@ -77,7 +77,7 @@ const Header: React.FC = () => {
             setAccountFeature([
                 {
                     name: "Xem Tài Khoản",
-                    href: "/profile",
+                    href: "/account/profile",
                     icon: UserCircleIcon,
                 },
                 {

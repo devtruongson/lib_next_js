@@ -3,7 +3,11 @@ import { CopyClipBoard } from "@/components/CopyToClipboard/CopyToClipboard";
 import handleValidateForm from "@/helpers/handleValidateForm";
 import validateImageFile from "@/helpers/validateImageFIle";
 import { HandleApi } from "@/services/HandleAPI";
-import { getCurrentUserService } from "@/services/userService";
+import {
+    getCurrentUserService,
+    updateUserService,
+    uploadImageService,
+} from "@/services/userService";
 import { IProfile, IRes, IUpdateProfile, IUser } from "@/utils/interface";
 import { Button, Checkbox, Image, Spin } from "antd";
 import { HttpStatusCode } from "axios";
@@ -130,6 +134,11 @@ const Profile: NextPage = () => {
     const handleSubmitData = async (e: FormEvent): Promise<void> => {
         e.preventDefault();
 
+        if (!avatar && !profile.avatar_url) {
+            Swal.fire("Ohh", "Bạn Phải Chọn Ảnh", "info");
+            return;
+        }
+
         const arrValidate = [
             user.id,
             user.email,
@@ -137,7 +146,6 @@ const Profile: NextPage = () => {
             user.lastName,
             profile.id,
             profile.address,
-            profile.avatar_url,
             profile.birthday,
             profile.class,
             profile.description,
@@ -146,25 +154,45 @@ const Profile: NextPage = () => {
         ];
         const checkValidateInput = handleValidateForm(arrValidate);
         if (!checkValidateInput) return;
-
-        const dataBuilder: IUpdateProfile = {
-            user: {
-                email: user.email,
-                firstName: user.fistName,
-                lastName: user.lastName,
-            },
-            profile: {
-                address: profile.address,
-                avatar_url: profile.avatar_url,
-                birthday: profile.birthday,
-                class: profile.class,
-                description: profile.description,
-                phoneNumber: profile.phoneNumber,
-                school: profile.school,
-            },
-        };
-
-        console.log(dataBuilder);
+        setIsLoading(true);
+        try {
+            let url_profile_link: string = profile.avatar_url;
+            if (avatar) {
+                const Res = await uploadImageService({
+                    image: avatar,
+                });
+                url_profile_link = Res.data.filename;
+            }
+            const dataBuilder: IUpdateProfile = {
+                user: {
+                    firstName: user.fistName,
+                    lastName: user.lastName,
+                },
+                profile: {
+                    address: profile.address,
+                    avatar_url: url_profile_link,
+                    birthday: profile.birthday,
+                    class: profile.class,
+                    description: profile.description,
+                    phoneNumber: profile.phoneNumber,
+                    school: profile.school,
+                },
+            };
+            const Res: IRes<any> = await HandleApi(
+                updateUserService,
+                dataBuilder
+            );
+            if (Res.statusCode === HttpStatusCode.Ok) {
+                Swal.fire("Ohh", "Bạn Đã Cập Nhật Thành Công!", "success");
+            }
+            setTimeout(() => {
+                window.location.reload();
+            }, 600);
+        } catch (error) {
+            console.log(error);
+            Swal.fire("Ohh", "Something went wrong", "info");
+        }
+        setIsLoading(false);
     };
 
     return (
@@ -294,7 +322,11 @@ const Profile: NextPage = () => {
                                     placeholder=""
                                     required
                                     value={
-                                        profile.birthday ? profile.birthday : ""
+                                        profile.birthday
+                                            ? new Date(
+                                                  profile.birthday
+                                              ).toLocaleDateString("en-CA")
+                                            : ""
                                     }
                                     onChange={handleChangeInputProfile}
                                 />
@@ -339,6 +371,7 @@ const Profile: NextPage = () => {
                                 value={user.email}
                                 onChange={handleChangeInput}
                                 disabled
+                                name="email"
                             />
                             <label
                                 htmlFor="email"
@@ -370,7 +403,7 @@ const Profile: NextPage = () => {
                         <div className="relative z-0 w-full group">
                             <input
                                 type="text"
-                                name="firstName"
+                                name="fistName"
                                 id="firstName"
                                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "

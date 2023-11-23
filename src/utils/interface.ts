@@ -127,7 +127,6 @@ export interface ISearch {
 
 export interface IUpdateProfile {
     user: {
-        email: string;
         firstName: string;
         lastName: string;
     };
@@ -140,4 +139,8 @@ export interface IUpdateProfile {
         birthday: string;
         description: string;
     };
+}
+
+export interface IUploadImage {
+    image: File;
 }

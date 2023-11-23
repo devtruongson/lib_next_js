@@ -10,20 +10,25 @@ export async function HandleApi(api: Function, data?: any) {
     } catch (error) {
         const err = error as AxiosError;
         if (err.response?.status === 401) {
-            if (!isRefreshing) {
-                isRefreshing = true;
-                refreshPromise = refreshTokenService(); // Lưu trữ promise của refreshToken
-                await refreshPromise; // Đợi cho đến khi token mới được làm mới
-                refreshPromise = null; // Đặt lại promise
-                isRefreshing = false;
-                return await api(data);
-            } else if (refreshPromise) {
-                await refreshPromise;
-                return await api(data);
-            } else {
-                // Xử lý lỗi khi không có promise refreshToken
-                console.error("Lỗi không có promise refreshToken");
-                await handleLogout();
+            try {
+                if (!isRefreshing) {
+                    isRefreshing = true;
+                    refreshPromise = refreshTokenService(); // Lưu trữ promise của refreshToken
+                    await refreshPromise; // Đợi cho đến khi token mới được làm mới
+                    refreshPromise = null; // Đặt lại promise
+                    isRefreshing = false;
+                    return await api(data);
+                } else if (refreshPromise) {
+                    await refreshPromise;
+                    return await api(data);
+                } else {
+                    // Xử lý lỗi khi không có promise refreshToken
+                    console.error("Lỗi không có promise refreshToken");
+                    await handleLogout();
+                }
+            } catch (error) {
+                localStorage.clear();
+                await logoutService();
             }
         } else {
             return Promise.reject(error);

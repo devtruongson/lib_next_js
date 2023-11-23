@@ -32,7 +32,7 @@ export const checkCurrentUserService = (): Promise<ICurrentUserRole> => {
 };
 
 export const logoutService = (): Promise<ICurrentUserRole> => {
-    return axios.post("/user/logout", {
+    return axios.get("/auth/logout", {
         withCredentials: true,
     });
 };
