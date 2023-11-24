@@ -32,94 +32,123 @@ const About: NextPage = () => {
                 </h2>
                 <Row className="mt-4" gutter={16}>
                     <Col sm={24}>
-                        <div className="flex gap-4 flex-wrap">
+                        <div className="flex gap-4 justify-between flex-wrap">
                             <Tooltip title="NextJS">
-                                <Image
-                                    preview={false}
-                                    width={100}
-                                    height={100}
-                                    title="nextJS"
-                                    src="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png"
-                                    alt="Hình Ảnh"
-                                    className="object-container border-[1px] border-solid border-[#ccc] rounded-[50%]"
-                                />
+                                <a href="https://nextjs.org/">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="nextJS"
+                                        src="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png"
+                                        alt="Hình Ảnh"
+                                        className="object-container border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
                             </Tooltip>
                             <Tooltip title="Node.JS">
-                                <Image
-                                    preview={false}
-                                    width={100}
-                                    height={100}
-                                    title="Node.JS"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
-                                    alt="Hình Ảnh"
-                                    className="object-container border-[1px] border-solid border-[#ccc] rounded-[50%]"
-                                />
+                                <a href="https://nodejs.org/en">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="Node.JS"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+                                        alt="Hình Ảnh"
+                                        className="object-container border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
+                            </Tooltip>
+                            <Tooltip title="FireBase">
+                                <a href="https://firebase.google.com/">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="FireBase"
+                                        src="https://1.bp.blogspot.com/-YIfQT6q8ZM4/Vzyq5z1B8HI/AAAAAAAAAAc/UmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB/w1200-h630-p-k-no-nu/image00.png"
+                                        alt="Hình Ảnh"
+                                        className="object-cover border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
                             </Tooltip>
                             <Tooltip title="NestJs">
-                                <Image
-                                    preview={false}
-                                    width={100}
-                                    height={100}
-                                    title="NestJs"
-                                    src="https://camo.githubusercontent.com/5f54c0817521724a2deae8dedf0c280a589fd0aa9bffd7f19fa6254bb52e996a/68747470733a2f2f6e6573746a732e636f6d2f696d672f6c6f676f2d736d616c6c2e737667"
-                                    alt="Hình Ảnh"
-                                    className="object-container border-[1px] border-solid border-[#ccc] rounded-[50%]"
-                                />
+                                <a href="https://nestjs.com/">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="NestJs"
+                                        src="https://camo.githubusercontent.com/5f54c0817521724a2deae8dedf0c280a589fd0aa9bffd7f19fa6254bb52e996a/68747470733a2f2f6e6573746a732e636f6d2f696d672f6c6f676f2d736d616c6c2e737667"
+                                        alt="Hình Ảnh"
+                                        className="object-container border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
                             </Tooltip>
                             <Tooltip title="TypeORM">
-                                <Image
-                                    preview={false}
-                                    width={100}
-                                    height={100}
-                                    title="TypeORM"
-                                    src="https://avatars.githubusercontent.com/u/20165699?s=200&v=4"
-                                    alt="Hình Ảnh"
-                                    className="object-container border-[1px] border-solid border-[#ccc] rounded-[50%]"
-                                />
+                                <a href="https://typeorm.io/">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="TypeORM"
+                                        src="https://avatars.githubusercontent.com/u/20165699?s=200&v=4"
+                                        alt="Hình Ảnh"
+                                        className="object-container border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
                             </Tooltip>
                             <Tooltip title="Docker">
-                                <Image
-                                    preview={false}
-                                    width={100}
-                                    height={100}
-                                    title="Docker"
-                                    src="https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2021/01/28133406/docker-banner.png"
-                                    alt="Hình Ảnh"
-                                    className="object-cover border-[1px] border-solid border-[#ccc] rounded-[50%]"
-                                />
+                                <a href="https://www.docker.com/">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="Docker"
+                                        src="https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2021/01/28133406/docker-banner.png"
+                                        alt="Hình Ảnh"
+                                        className="object-cover border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
                             </Tooltip>
                             <Tooltip title="MySQL">
-                                <Image
-                                    preview={false}
-                                    width={100}
-                                    height={100}
-                                    title="MySQL"
-                                    src="https://datascientest.com/de/wp-content/uploads/sites/8/2023/02/mysql.webp"
-                                    alt="Hình Ảnh"
-                                    className="object-cover border-[1px] border-solid border-[#ccc] rounded-[50%]"
-                                />
+                                <a href="https://www.mysql.com/">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="MySQL"
+                                        src="https://datascientest.com/de/wp-content/uploads/sites/8/2023/02/mysql.webp"
+                                        alt="Hình Ảnh"
+                                        className="object-cover border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
                             </Tooltip>
                             <Tooltip title="Nginx">
-                                <Image
-                                    preview={false}
-                                    width={100}
-                                    height={100}
-                                    title="Nginx"
-                                    src="https://guides.wp-bullet.com/wp-content/uploads/2019/08/nginx-custom-http-headers.png"
-                                    alt="Hình Ảnh"
-                                    className="object-cover border-[1px] border-solid border-[#ccc] rounded-[50%]"
-                                />
+                                <a href="https://www.nginx.com/">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="Nginx"
+                                        src="https://guides.wp-bullet.com/wp-content/uploads/2019/08/nginx-custom-http-headers.png"
+                                        alt="Hình Ảnh"
+                                        className="object-cover border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
                             </Tooltip>
                             <Tooltip title="TypeScript">
-                                <Image
-                                    preview={false}
-                                    width={100}
-                                    height={100}
-                                    title="TypeScript"
-                                    src="https://static-00.iconduck.com/assets.00/file-type-typescript-icon-2048x1349-0um6gqic.png"
-                                    alt="Hình Ảnh"
-                                    className="object-contain border-[1px] border-solid border-[#ccc] rounded-[50%]"
-                                />
+                                <a href="https://www.typescriptlang.org/">
+                                    <Image
+                                        preview={false}
+                                        width={100}
+                                        height={100}
+                                        title="TypeScript"
+                                        src="https://static-00.iconduck.com/assets.00/file-type-typescript-icon-2048x1349-0um6gqic.png"
+                                        alt="Hình Ảnh"
+                                        className="object-contain border-[1px] border-solid border-[#ccc] rounded-[50%]"
+                                    />
+                                </a>
                             </Tooltip>
                         </div>
                     </Col>
@@ -161,7 +190,7 @@ const About: NextPage = () => {
                                     className="w-full object-cover rounded-sm"
                                 />
                             </Tooltip>
-                            <Tooltip title="Khả Năng SEO Đạt Đến 100 Trên Google Perfomance">
+                            <Tooltip title="Thời Gian Tải Trang Chỉ 166mls">
                                 <ImageNext
                                     src="/imgs/loadedtime.png"
                                     width={1980}
