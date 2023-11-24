@@ -259,6 +259,14 @@ const Header: React.FC = () => {
                                     );
                                 }
                             })}
+                            <div>
+                                <h4 className="font-[600] text-[15px] mb-2">
+                                    Tìm Kiếm Sách
+                                </h4>
+                                <div className="w-[full] relative flex justify-between items-center border-[1px] overflow-hidden border-solid border-[#ccc] rounded-[6px]">
+                                    <SearchInput />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Dialog.Panel>
