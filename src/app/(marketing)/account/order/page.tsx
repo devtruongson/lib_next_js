@@ -32,7 +32,6 @@ const Order: NextPage = () => {
     return (
         <div className="min-h-[40vh]">
             <Tabs
-                tabPosition="right"
                 defaultActiveKey="1"
                 items={items}
                 style={{

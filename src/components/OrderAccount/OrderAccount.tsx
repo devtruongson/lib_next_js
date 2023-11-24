@@ -53,7 +53,7 @@ const OrderAccount: React.FC<{ filter: string }> = ({ filter }) => {
                                         </Link>
                                     </h4>
                                     <div className="py-2">
-                                        <table className="border-collapse border border-[#ccc] min-w-[50%]">
+                                        <table className="border-collapse border border-[#ccc] w-[100%] md:w-[50%]">
                                             <tbody>
                                                 <tr>
                                                     <td className="border border-[#ccc] px-2 py-1">

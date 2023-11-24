@@ -102,13 +102,13 @@ export default function Auth() {
             <Button
                 onClick={handleBackToHome}
                 type="dashed"
-                className="fixed top-[30px] left-[40px]"
+                className="fixed top-[30px] left-[40px] z-[9999]"
             >
                 Quay Lại
             </Button>
             <div className="container mx-auto xl:max-w-[1280px] bg-[#fafafa]">
                 <Row>
-                    <Col span={12}>
+                    <Col span={12} sm={0} md={12} className="hidden md:block">
                         <div className="mt-[14vh] ml-20">
                             <p className="text-4xl font-[600] leading-[45px]">
                                 Chào mừng bạn đến với{" "}
@@ -131,8 +131,8 @@ export default function Auth() {
                             />
                         </div>
                     </Col>
-                    <Col span={12}>
-                        <div className="h-[90%] w-[70%] ml-[20%] bg-[#fff] mt-[10%] shadow-2xl rounded p-5">
+                    <Col sm={24} md={12}>
+                        <div className="h-[100%] w-[90%] mx-auto md:h-[90%] md:w-[70%] md:ml-[20%] bg-[#fff] md:mt-[10%] shadow-2xl rounded p-5">
                             <div className="container w-[100%]">
                                 <p className="text-[20px] font-medium">
                                     {login ? "Đăng nhập" : "Đăng ký"}
