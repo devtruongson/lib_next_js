@@ -228,7 +228,7 @@ const Profile: NextPage = () => {
                             />
                         </div>
                         <div className="grid md:grid-cols-2 md:gap-6 mt-8">
-                            <div className="relative z-0 w-full group">
+                            <div className="relative z-0 w-full group mb-6 md:mb-0">
                                 <input
                                     type="text"
                                     name="phoneNumber"
@@ -250,7 +250,7 @@ const Profile: NextPage = () => {
                                     Phone Number
                                 </label>
                             </div>
-                            <div className="relative z-0 w-full group">
+                            <div className="relative z-0 w-full group mb-6 md:mb-0">
                                 <input
                                     type="text"
                                     name="address"
@@ -272,7 +272,7 @@ const Profile: NextPage = () => {
                             </div>
                         </div>
                         <div className="grid md:grid-cols-2 md:gap-6 mt-8">
-                            <div className="relative z-0 w-full group">
+                            <div className="relative z-0 w-full group mb-6 md:mb-0">
                                 <input
                                     type="text"
                                     name="class"
@@ -290,7 +290,7 @@ const Profile: NextPage = () => {
                                     Lớp Học
                                 </label>
                             </div>
-                            <div className="relative z-0 w-full group">
+                            <div className="relative z-0 w-full group mb-6 md:mb-0">
                                 <input
                                     type="text"
                                     name="school"
@@ -310,7 +310,7 @@ const Profile: NextPage = () => {
                             </div>
                         </div>
                         <div className="grid md:grid-cols-2 md:gap-6 mt-8">
-                            <div className="relative z-0 w-full group">
+                            <div className="relative z-0 w-full group mb-6 md:mb-0">
                                 <input
                                     type="date"
                                     name="birthday"
@@ -334,7 +334,7 @@ const Profile: NextPage = () => {
                                     Sinh Nhật
                                 </label>
                             </div>
-                            <div className="relative z-0 w-full group">
+                            <div className="relative z-0 w-full group mb-6 md:mb-0">
                                 <textarea
                                     name="description"
                                     id="description"
@@ -358,7 +358,7 @@ const Profile: NextPage = () => {
                         </div>
                     </div>
                     <div className="grid md:grid-cols-2 md:gap-6">
-                        <div className="relative z-0 w-full group">
+                        <div className="relative z-0 w-full group mb-6 md:mb-0">
                             <input
                                 type="email"
                                 id="email"
@@ -377,7 +377,7 @@ const Profile: NextPage = () => {
                                 Email address
                             </label>
                         </div>
-                        <div className="relative z-0 w-full mb-6 group">
+                        <div className="relative z-0 w-full group mb-6 md:mb-0">
                             <div>
                                 <CopyClipBoard
                                     is_render_children
@@ -397,7 +397,7 @@ const Profile: NextPage = () => {
                         </div>
                     </div>
                     <div className="grid md:grid-cols-2 md:gap-6">
-                        <div className="relative z-0 w-full group">
+                        <div className="relative z-0 w-full group mb-6 md:mb-0">
                             <input
                                 type="text"
                                 name="fistName"
@@ -415,7 +415,7 @@ const Profile: NextPage = () => {
                                 First name
                             </label>
                         </div>
-                        <div className="relative z-0 w-full group">
+                        <div className="relative z-0 w-full group mb-6 md:mb-0">
                             <input
                                 type="text"
                                 name="lastName"
