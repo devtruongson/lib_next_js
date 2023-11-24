@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, memo, useEffect, useState } from "react";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Dialog, Popover, Transition } from "@headlessui/react";
 import {
     Bars3Icon,
     XMarkIcon,

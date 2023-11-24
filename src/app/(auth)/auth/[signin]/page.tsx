@@ -85,6 +85,7 @@ export default function Auth() {
                 if (!user) {
                     return;
                 }
+                console.log(user);
                 let dataBuider: IDataLoginAndRegisterFireBase = {
                     email: user.email as string,
                     lastName: user.displayName as string,
