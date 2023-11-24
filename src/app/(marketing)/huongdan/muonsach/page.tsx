@@ -49,7 +49,7 @@ export default function HDMuonSach() {
             </div>
             <div className="flex justify-center py-5">
                 <iframe
-                    className="rounded-md overflow-hidden w-[70%] h-[400px]"
+                    className="rounded-md overflow-hidden w-[90%] md:w-[70%] h-[400px]"
                     src="https://www.youtube.com/embed/gJgTAIKWDgM"
                     title="Vùng Ký Ức - HippoHappy | The Masked Singer Vietnam 2023 [Audio Lyrics]"
                     frameBorder="0"
@@ -57,7 +57,7 @@ export default function HDMuonSach() {
                     allowFullScreen
                 ></iframe>
             </div>
-            <div className="py-5 w-[70%] mx-auto">
+            <div className="py-5  w-[90%] md:w-[70%] mx-auto">
                 <p className="text-slate-600 dark:text-slate-400 text-sm mx-auto">
                     Khi bạn xem song video trên bạn có thể mượn sách online, hãy
                     lưu ý khi mượn sách song bạn phải đến trung tâm để lấy sách.

@@ -12,7 +12,7 @@ export default function HomePage() {
     return (
         <div>
             <Row gutter={16}>
-                <Col sm={8}>
+                <Col sm={8} className="mb-4 md:mb-0">
                     <Carousel
                         className="rounded-[14px] overflow-hidden"
                         autoplay

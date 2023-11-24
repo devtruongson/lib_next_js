@@ -227,6 +227,9 @@ const Header: React.FC = () => {
                                     return (
                                         <div className="py-6" key={uuid4()}>
                                             <Link
+                                                onClick={() =>
+                                                    setMobileMenuOpen(false)
+                                                }
                                                 href={item.href}
                                                 className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                             >
@@ -236,9 +239,18 @@ const Header: React.FC = () => {
                                     );
                                 } else {
                                     return (
-                                        <div className="py-6" key={uuid4()}>
+                                        <div
+                                            className="py-6"
+                                            key={uuid4()}
+                                            onClick={() =>
+                                                setMobileMenuOpen(false)
+                                            }
+                                        >
                                             <p
-                                                onClick={handleLogout}
+                                                onClick={() => {
+                                                    handleLogout();
+                                                    setMobileMenuOpen(false);
+                                                }}
                                                 className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                             >
                                                 {item.name}
