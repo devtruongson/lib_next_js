@@ -32,7 +32,7 @@ const About: NextPage = () => {
                 </h2>
                 <Row className="mt-4" gutter={16}>
                     <Col sm={24}>
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 flex-wrap">
                             <Tooltip title="NextJS">
                                 <Image
                                     preview={false}
@@ -123,7 +123,7 @@ const About: NextPage = () => {
                             </Tooltip>
                         </div>
                     </Col>
-                    <Col sm={12} className="mt-10">
+                    <Col sm={24} className="mt-10">
                         <h3 className="font-[600] text-[18px]">Thông Số</h3>
                         <div className="mt-5">
                             <p className="mx-auto text-sm mb-4 text-justify text-slate-600 dark:text-slate-400">
@@ -161,112 +161,13 @@ const About: NextPage = () => {
                                     className="w-full object-cover rounded-sm"
                                 />
                             </Tooltip>
-                            <div className="mt-6">
-                                <table className="border-collapse border border-[#ccc] w-full">
-                                    <thead>
-                                        <tr>
-                                            <th className="border border-[#ccc]">
-                                                Thuộc Tính
-                                            </th>
-                                            <th className="border border-[#ccc]">
-                                                Thông Số
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td className="border border-[#ccc] px-3 py-2">
-                                                Server Side Rendering
-                                            </td>
-                                            <td className="border border-[#ccc] px-3 py-2">
-                                                <CheckBadgeIcon
-                                                    width={30}
-                                                    hanging={30}
-                                                    color="blue"
-                                                    className="mx-auto"
-                                                />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="border border-[#ccc] px-3 py-2">
-                                                Client Side Rendering
-                                            </td>
-                                            <td className="border border-[#ccc] px-3 py-2">
-                                                <CheckBadgeIcon
-                                                    width={30}
-                                                    hanging={30}
-                                                    color="blue"
-                                                    className="mx-auto"
-                                                />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="border border-[#ccc] px-3 py-2">
-                                                Single Page App
-                                            </td>
-                                            <td className="border border-[#ccc] px-3 py-2">
-                                                <CheckBadgeIcon
-                                                    width={30}
-                                                    hanging={30}
-                                                    color="blue"
-                                                    className="mx-auto"
-                                                />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="border border-[#ccc] px-3 py-2">
-                                                Muitiple Page App
-                                            </td>
-                                            <td className="border border-[#ccc] px-3 py-2">
-                                                <XCircleIcon
-                                                    width={30}
-                                                    hanging={30}
-                                                    color="blue"
-                                                    className="mx-auto"
-                                                />
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col sm={12} className="mt-10">
-                        <h3 className="font-[600] text-[18px]">Thông Số</h3>
-                        <div className="mt-5">
-                            <p className="mx-auto text-sm mb-4 text-justify text-slate-600 dark:text-slate-400">
-                                Với{" "}
-                                <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text font-extrabold text-transparent">
-                                    Next.Js 13
-                                </span>
-                                Server-side Rendering (SSR): Next.js hỗ trợ SSR
-                                mặc định, giúp trang web của bạn có thể tạo ra
-                                HTML động tại thời điểm yêu cầu. Điều này cung
-                                cấp nội dung tốt hơn cho các công cụ tìm kiếm so
-                                với các ứng dụng chỉ sử dụng client-side
-                                rendering. Static Site Generation (SSG): Next.js
-                                hỗ trợ SSG, cho phép bạn tạo các trang tĩnh tốt
-                                cho việc tối ưu hóa SEO. Trang tĩnh có thể được
-                                tạo ra tại thời điểm xây dựng, giảm thời gian
-                                tải trang và cải thiện hiệu suất. Incremental
-                                Static Regeneration (ISR): Next.js 13 giới thiệu
-                                ISR, một tính năng cho phép bạn làm mới các
-                                trang tĩnh một cách tương đối, giúp cập nhật
-                                nhanh chóng thông tin mới trên trang web của bạn
-                                mà không cần xây dựng lại toàn bộ trang.
-                                Automatic Image Optimization: Next.js cung cấp
-                                tối ưu hóa hình ảnh tự động, giúp giảm dung
-                                lượng hình ảnh và cải thiện hiệu suất tải trang.
-                                Hiệu ứng này có thể tích cực đối với SEO, đặc
-                                biệt là trong môi trường di động.
-                            </p>
                             <Tooltip title="Khả Năng SEO Đạt Đến 100 Trên Google Perfomance">
                                 <ImageNext
-                                    src="/imgs/seo100.png"
+                                    src="/imgs/loadedtime.png"
                                     width={1980}
                                     height={1080}
                                     alt="Hình ẢNh"
-                                    className="w-full object-cover rounded-sm"
+                                    className="w-full object-cover rounded-sm mt-4"
                                 />
                             </Tooltip>
                             <div className="mt-6">
