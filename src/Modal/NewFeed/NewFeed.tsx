@@ -63,6 +63,7 @@ const NewFeed: React.FC = () => {
                             </Link>
                         </h4>
                     </div>
+                    <Divider />
                     <div>
                         <h4 className="pb-2 font-[600]">
                             <Link
