@@ -54,6 +54,18 @@ const NewFeed: React.FC = () => {
                     <div>
                         <h4 className="pb-2 font-[600]">
                             <Link
+                                href="/about"
+                                onClick={() => {
+                                    handleCLose();
+                                }}
+                            >
+                                Các Công Nghệ Lib System Sử Dụng 😊
+                            </Link>
+                        </h4>
+                    </div>
+                    <div>
+                        <h4 className="pb-2 font-[600]">
+                            <Link
                                 href="/huongdan/muonsach"
                                 onClick={() => {
                                     handleCLose();
