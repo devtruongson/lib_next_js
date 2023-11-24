@@ -120,7 +120,13 @@ const OrderView: React.FC<{ book: IBook }> = ({ book }) => {
         <div className="flex justify-center items-center md:block">
             <Row gutter={16}>
                 <Col sm={12}>
-                    <Button type="dashed" className="w-full h-[36px]">
+                    <Button
+                        type="dashed"
+                        className="w-full h-[36px]"
+                        onClick={() => {
+                            Router.push("/account/order");
+                        }}
+                    >
                         Sách Đã Mượn
                     </Button>
                 </Col>
