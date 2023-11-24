@@ -21,6 +21,7 @@ import React, {
     useState,
 } from "react";
 import Swal from "sweetalert2";
+import moment from "moment";
 
 const Profile: NextPage = () => {
     const [profile, setProfile] = useState<IProfile>({
@@ -320,9 +321,9 @@ const Profile: NextPage = () => {
                                     required
                                     value={
                                         profile.birthday
-                                            ? new Date(
-                                                  profile.birthday
-                                              ).toLocaleDateString("en-CA")
+                                            ? moment(profile.birthday).format(
+                                                  "YYYY-MM-DD"
+                                              )
                                             : ""
                                     }
                                     onChange={handleChangeInputProfile}
