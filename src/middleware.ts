@@ -6,7 +6,11 @@ import { configApp } from "./utils/enum";
 
 export async function middleware(request: NextRequest) {
     const CookieApp = request.cookies.toString();
-    if (!CookieApp) {
+
+    if (
+        !request.cookies.get("access_token")?.value ||
+        !request.cookies.get("refresh_token")?.value
+    ) {
         return NextResponse.next();
     }
 
