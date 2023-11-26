@@ -158,3 +158,12 @@ export interface IBookCate {
     book: IBook;
     cate: ICategorie;
 }
+
+export interface IBlog {
+    id: number;
+    title: string;
+    is_active: boolean;
+    slug: string;
+    contentHTML: string;
+    meta_description: string;
+}

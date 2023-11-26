@@ -5,6 +5,7 @@ import className from "classnames/bind";
 import styles from "./home.module.scss";
 import BookNews from "../../components/BookNews/BookNews";
 import BookTopBrows from "@/components/BookTopBrows/BookTopBrows";
+import Blog from "@/components/Blog/Blog";
 
 const cx: Function = className.bind(styles);
 
@@ -73,6 +74,9 @@ export default function HomePage() {
             </Row>
             <div>
                 <BookTopBrows />
+            </div>
+            <div className="mt-10">
+                <Blog />
             </div>
         </div>
     );
