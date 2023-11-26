@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./css/globals.css";
 import "./css/preview_mark_down.css";
 import "./css/style.css";
-import StyledComponentsRegistry from "@/lib/AntdRegistry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +23,7 @@ export default function RootLayout({
                 name="google-site-verification"
                 content="6VLnuCRKAL_sVhqRoOlO4HzmYjf78guJEXX-pOfu3UA"
             />
-            <body className={inter.className}>
-                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-            </body>
+            <body className={inter.className}>{children}</body>
         </html>
     );
 }
