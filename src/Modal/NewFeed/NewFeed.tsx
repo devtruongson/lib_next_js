@@ -6,13 +6,22 @@ import React, { useEffect, useState } from "react";
 const NewFeed: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    useEffect(() => {
-        setIsOpen(Math.random() < 0.5);
-    }, []);
-
     const handleCLose = (): void => {
         setIsOpen(false);
     };
+
+    useEffect(() => {
+        const is_open: boolean | null = JSON.parse(
+            localStorage.getItem("is_open") || "null"
+        );
+
+        if (typeof is_open === "object") {
+            localStorage.setItem("is_open", JSON.stringify(true));
+            setIsOpen(true);
+        } else {
+            setIsOpen(Math.random() < 0.5);
+        }
+    }, []);
 
     return (
         <>
