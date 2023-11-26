@@ -86,7 +86,7 @@ const BookTopBrows: React.FC = () => {
                                 );
                             })}
                         {meta && meta.currentPage < meta.totalPages && (
-                            <Col sm={24}>
+                            <Col sm={24} span={24}>
                                 <Button
                                     type="dashed"
                                     className="w-[30%] mx-auto block mt-5"

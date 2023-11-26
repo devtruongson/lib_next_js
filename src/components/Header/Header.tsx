@@ -197,7 +197,6 @@ const Header: React.FC = () => {
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
                             <Image
                                 width={200}
                                 height={200}
@@ -222,6 +221,14 @@ const Header: React.FC = () => {
                     </div>
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
+                            <div className="mt-10">
+                                <h4 className="font-[600] text-[15px] mb-2">
+                                    Tìm Kiếm Sách
+                                </h4>
+                                <div className="w-[full] relative flex justify-between items-center border-[1px] overflow-hidden border-solid border-[#ccc] rounded-[6px]">
+                                    <SearchInput />
+                                </div>
+                            </div>
                             {accountFeature.map((item) => {
                                 if (item.href) {
                                     return (
@@ -259,14 +266,6 @@ const Header: React.FC = () => {
                                     );
                                 }
                             })}
-                            <div>
-                                <h4 className="font-[600] text-[15px] mb-2">
-                                    Tìm Kiếm Sách
-                                </h4>
-                                <div className="w-[full] relative flex justify-between items-center border-[1px] overflow-hidden border-solid border-[#ccc] rounded-[6px]">
-                                    <SearchInput />
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </Dialog.Panel>
