@@ -2,14 +2,6 @@ const path = require("path");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async rewrites() {
-        return [
-            {
-                source: "/detail/:slug*.html",
-                destination: "/detail/:slug*",
-            },
-        ];
-    },
     reactStrictMode: false,
     images: {
         remotePatterns: [

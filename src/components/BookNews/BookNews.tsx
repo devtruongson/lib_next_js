@@ -68,7 +68,6 @@ const BookNews: React.FC = () => {
                             <Link
                                 key={uuid4()}
                                 href={`/detail/${book.slug}`}
-                                as={`/detail/${book.slug}.html`}
                                 className="text-[currentColor]"
                             >
                                 <div className="px-[12px] py-[10px]">

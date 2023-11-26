@@ -161,7 +161,6 @@ const Search: NextPage = () => {
                                     <Link
                                         key={uuid4()}
                                         href={`/detail/${book.slug}`}
-                                        as={`/detail/${book.slug}.html`}
                                         className="text-[currentColor] flex justify-between py-2 px-3 max-h-[115px] overflow-hidden rounded-[5px] gap-3 my-4 mx-4 border-[1px] border-solid border-[#ccc]"
                                     >
                                         <Badge.Ribbon
