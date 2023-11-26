@@ -32,7 +32,7 @@ const About: NextPage = () => {
                 </h2>
                 <Row className="mt-4" gutter={16}>
                     <Col sm={24}>
-                        <div className="flex gap-4 justify-between flex-wrap">
+                        <div className="flex gap-4 justify-center md:justify-between flex-wrap">
                             <Tooltip title="NextJS">
                                 <a href="https://nextjs.org/">
                                     <Image
