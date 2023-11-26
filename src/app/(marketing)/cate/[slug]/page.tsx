@@ -67,7 +67,8 @@ const CategorieBook: NextPage = () => {
                                             className={`text-[9px]`}
                                         >
                                             <Link
-                                                href={`/detail/${item.book.slug}.html`}
+                                                href={`/detail/${book.slug}`}
+                                                as={`/detail/${book.slug}.html`}
                                                 className="text-[currentColor]"
                                             >
                                                 <div className="bg-[#fff] shadow-md h-full px-[20px] py-[10px] mx-auto rounded-[7px]">
