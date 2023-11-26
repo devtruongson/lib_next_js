@@ -62,7 +62,7 @@ const RelationBook: React.FC<{
                                                 }`}
                                             >
                                                 <Link
-                                                    href={`/detail/${item.slug}`}
+                                                    href={`/detail/${item.slug}.html`}
                                                     className="text-[currentColor]"
                                                 >
                                                     <div className="bg-[#fff] shadow-md h-full px-[20px] py-[10px] mx-auto rounded-[7px]">

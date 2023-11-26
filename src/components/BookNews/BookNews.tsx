@@ -67,7 +67,7 @@ const BookNews: React.FC = () => {
                         books.map((book) => (
                             <Link
                                 key={uuid4()}
-                                href={`/detail/${book.slug}`}
+                                href={`/detail/${book.slug}.html`}
                                 className="text-[currentColor]"
                             >
                                 <div className="px-[12px] py-[10px]">
